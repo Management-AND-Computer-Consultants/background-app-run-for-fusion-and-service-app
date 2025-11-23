@@ -22,12 +22,22 @@ cordova plugin add cordova-plugin-background-app-run
 
 ## Usage
 
+### Initialize the Plugin
+
+First, require the plugin module:
+
+```javascript
+var backRun;
+
+backRun = cordova.require('backgroundapprun.backgroundAppRun');
+```
+
 ### Start Background Service
 
 Start the background service with Picture-in-Picture support:
 
 ```javascript
-cordova.plugins.backgroundAppRun.startServ(
+backRun.startServ(
   function(success) {
     console.log('Background service started:', success);
   },
@@ -42,7 +52,7 @@ cordova.plugins.backgroundAppRun.startServ(
 Stop the background service:
 
 ```javascript
-cordova.plugins.backgroundAppRun.stopServ(
+backRun.stopServ(
   function(success) {
     console.log('Background service stopped:', success);
   },
@@ -57,7 +67,7 @@ cordova.plugins.backgroundAppRun.stopServ(
 Start the background sound service:
 
 ```javascript
-cordova.plugins.backgroundAppRun.startSoundServ(
+backRun.startSoundServ(
   function(success) {
     console.log('Sound service started:', success);
   },
@@ -72,7 +82,7 @@ cordova.plugins.backgroundAppRun.startSoundServ(
 Stop the background sound service:
 
 ```javascript
-cordova.plugins.backgroundAppRun.stopSoundServ(
+backRun.stopSoundServ(
   function(success) {
     console.log('Sound service stopped:', success);
   },
@@ -87,7 +97,7 @@ cordova.plugins.backgroundAppRun.stopSoundServ(
 Fire a custom event:
 
 ```javascript
-cordova.plugins.backgroundAppRun.fireEvent(
+backRun.fireEvent(
   'eventData',
   function(success) {
     console.log('Event fired:', success);
@@ -103,7 +113,7 @@ cordova.plugins.backgroundAppRun.fireEvent(
 Schedule a file deletion in the background using WorkManager:
 
 ```javascript
-cordova.plugins.backgroundAppRun.backgroundDeleteFile(
+backRun.backgroundDeleteFile(
   'file:///path/to/file',
   function(success) {
     console.log('File deletion scheduled:', success);
