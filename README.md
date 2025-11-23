@@ -8,6 +8,18 @@ Cordova plugin to run app in background with foreground services, WorkManager, a
 cordova plugin add cordova-plugin-background-app-run
 ```
 
+**Note:** If you encounter a "module already defined" error after installation, try:
+1. Remove and re-add the plugin:
+   ```bash
+   cordova plugin remove cordova-plugin-background-app-run
+   cordova plugin add cordova-plugin-background-app-run
+   ```
+2. Clean and rebuild your project:
+   ```bash
+   cordova clean
+   cordova build android
+   ```
+
 ## Usage
 
 ### Start Background Service

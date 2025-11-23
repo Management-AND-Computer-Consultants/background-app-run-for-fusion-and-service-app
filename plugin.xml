@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <plugin id="backgroundapprun" version="0.0.2" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
   <name>backgroundAppRun</name>
-  <js-module name="backgroundAppRun" src="www/backgroundAppRun.js">
+  <js-module name="backgroundapprun.backgroundAppRun" src="www/backgroundAppRun.js">
     <clobbers target="cordova.plugins.backgroundAppRun" />
   </js-module>
   <platform name="android">
@@ -10,7 +10,7 @@
         <param name="android-package" value="backgroundapprun.backgroundAppRun" />
       </feature>
     </config-file>
-    <config-file parent="/manifest" target="AndroidManifest.xml">
+    <config-file parent="/manifest" target="AndroidManifest.xml"></config-file>
       <uses-permission android:name="android.permission.WAKE_LOCK" />
       <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
       <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
