@@ -8,6 +8,100 @@ Cordova plugin to run app in background with foreground services, WorkManager, a
 cordova plugin add cordova-plugin-background-app-run
 ```
 
+## Usage
+
+### Start Background Service
+
+Start the background service with Picture-in-Picture support:
+
+```javascript
+cordova.plugins.backgroundAppRun.startServ(
+  function(success) {
+    console.log('Background service started:', success);
+  },
+  function(error) {
+    console.error('Error starting service:', error);
+  }
+);
+```
+
+### Stop Background Service
+
+Stop the background service:
+
+```javascript
+cordova.plugins.backgroundAppRun.stopServ(
+  function(success) {
+    console.log('Background service stopped:', success);
+  },
+  function(error) {
+    console.error('Error stopping service:', error);
+  }
+);
+```
+
+### Start Sound Service
+
+Start the background sound service:
+
+```javascript
+cordova.plugins.backgroundAppRun.startSoundServ(
+  function(success) {
+    console.log('Sound service started:', success);
+  },
+  function(error) {
+    console.error('Error starting sound service:', error);
+  }
+);
+```
+
+### Stop Sound Service
+
+Stop the background sound service:
+
+```javascript
+cordova.plugins.backgroundAppRun.stopSoundServ(
+  function(success) {
+    console.log('Sound service stopped:', success);
+  },
+  function(error) {
+    console.error('Error stopping sound service:', error);
+  }
+);
+```
+
+### Fire Event
+
+Fire a custom event:
+
+```javascript
+cordova.plugins.backgroundAppRun.fireEvent(
+  'eventData',
+  function(success) {
+    console.log('Event fired:', success);
+  },
+  function(error) {
+    console.error('Error firing event:', error);
+  }
+);
+```
+
+### Background Delete File
+
+Schedule a file deletion in the background using WorkManager:
+
+```javascript
+cordova.plugins.backgroundAppRun.backgroundDeleteFile(
+  'file:///path/to/file',
+  function(success) {
+    console.log('File deletion scheduled:', success);
+  },
+  function(error) {
+    console.error('Error scheduling deletion:', error);
+  }
+);
+```
+
 ## Important Note
 
 If you encounter an error with this import line:
