@@ -28,8 +28,6 @@ import android.view.WindowManager;
 
 import androidx.core.app.NotificationCompat;
 
-import com.berger.app.cbservice.R;
-
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaInterface;
 import org.apache.cordova.CordovaPlugin;
