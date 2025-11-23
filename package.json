@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-background-app-run",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Cordova plugin to run app in background with foreground services, WorkManager, and Picture-in-Picture support",
   "main": "www/backgroundAppRun.js",
   "scripts": {
